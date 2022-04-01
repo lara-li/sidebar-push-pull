@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation with icons</title>
+    <script src="https://kit.fontawesome.com/444b1c8316.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 500;
+
+
+        }
+
+        .navbar__box-out {
+            background-color: #21b494;
+            height: 100%;
+            min-width: fit-content;
+            width: 200px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-top: 5rem;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .hide {
+            left: -200px;
+            pointer-events: none;
+        }
+
+        .navbar__box-in {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            /* or you can add margin to i element*/
+            padding: 20px 12px;
+            text-transform: capitalize;
+            background: #0aa583;
+            border-bottom: 1px solid #21b494;
+        }
+
+        .navbar__box-in:hover {
+            background: rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        .navbar__box-in:active {
+            background: rgba(0, 0, 0, 0.3);
+            
+        }
+
+        i {
+            width: 20px;
+        }
+
+        .navbar__button-control {
+            padding: .5rem .8rem;
+            display: block;
+            position: absolute;
+            top: 30rem;
+            right: 3rem;
+            background-color: rgb(33, 180, 148);
+            border: none;
+            outline: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-transform: capitalize;
+            font: inherit;
+        }
+
+        .navbar__button-control:hover {
+            filter: brightness(110%);
+        }
+
+        .navbar__button-control:active {
+            filter: brightness(90%);
+
+        }
+    </style>
+    <script src="./app.js" defer></script>
+</head>
+
+<body>
+    <h1>hello world</h1>
+    <div class="navbar__box-out ">
+        <a class="navbar__box-in">
+            <i class="fas fa-home"></i>
+            home
+        </a>
+        <a class="navbar__box-in">
+            <i class="fas fa-images"></i>
+            photos
+        </a>
+        <a class="navbar__box-in">
+            <i class="fas fa-comments"></i>
+            forum
+        </a>
+        <a class="navbar__box-in">
+            <i class="fas fa-sign-out" aria-hidden="true"></i>
+            logout
+        </a>
+    </div>
+    <button class="navbar__button-control" type="button">open/close navigation</button>
+
+
+
+
+
+</body>
+
+</html>
